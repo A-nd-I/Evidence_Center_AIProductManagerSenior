@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A-ND-I Evidence Center | AI Product, Evaluation & Governance</title>
+  <meta name="description" content="Evidence Center for A-ND-I / Andrés Mogollón: AI product ownership, enterprise AI workflows, evaluation, governance, delivery discipline, and product evidence." />
+  <meta property="og:title" content="A-ND-I Evidence Center" />
+  <meta property="og:description" content="Evidence of AI product ownership, agent behavior definition, evaluation, governance, and enterprise delivery." />
+  <style>
+    :root{
+      --bg:#070b16; --bg2:#0b1222; --panel:#0f172a; --panel2:#111c33; --line:rgba(148,163,184,.20);
+      --text:#f8fafc; --muted:#a7b3c8; --soft:#d7dee9; --blue:#38bdf8; --cyan:#67e8f9;
+      --green:#34d399; --amber:#fbbf24; --violet:#a78bfa; --pink:#f472b6; --danger:#fb7185;
+      --shadow: 0 30px 80px rgba(0,0,0,.38); --radius: 24px; --radius2: 16px;
+      --max: 1180px; --side: 265px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;color:var(--text);background:var(--bg);line-height:1.55;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background:
+      radial-gradient(circle at 14% 8%, rgba(56,189,248,.18), transparent 32%),
+      radial-gradient(circle at 88% 18%, rgba(167,139,250,.15), transparent 35%),
+      radial-gradient(circle at 48% 85%, rgba(52,211,153,.10), transparent 38%),
+      linear-gradient(180deg,#071124 0%,#070b16 45%,#050711 100%)}
+    body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.35;background-image:linear-gradient(rgba(148,163,184,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.09) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
+    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}.accent{color:var(--blue)}
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(7,11,22,.74);border-bottom:1px solid var(--line)}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand-mark{height:38px;width:38px;display:grid;place-items:center;border:1px solid rgba(56,189,248,.34);background:linear-gradient(135deg,rgba(56,189,248,.22),rgba(167,139,250,.16));border-radius:13px;box-shadow:0 0 30px rgba(56,189,248,.10)}.brand small{display:block;color:var(--muted);font-weight:600;letter-spacing:.02em;margin-top:-3px}.navlinks{display:flex;gap:8px;align-items:center}.navlinks a{font-size:14px;color:var(--muted);padding:9px 12px;border:1px solid transparent;border-radius:999px;transition:.18s ease}.navlinks a:hover{color:var(--text);border-color:rgba(56,189,248,.25);background:rgba(56,189,248,.06)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 16px;border-radius:999px;border:1px solid rgba(148,163,184,.22);color:var(--text);font-weight:750;font-size:14px;background:rgba(15,23,42,.72);transition:.18s ease;cursor:pointer}.btn:hover{transform:translateY(-1px);border-color:rgba(56,189,248,.5);box-shadow:0 12px 28px rgba(56,189,248,.12)}.btn.primary{background:linear-gradient(135deg,var(--blue),#2563eb);color:#04111f;border:0}.btn.ghost{background:rgba(255,255,255,.03)}
+    .hero{padding:72px 0 44px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) 420px;gap:42px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--cyan);font-weight:850;text-transform:uppercase;letter-spacing:.14em;font-size:12px}.eyebrow:before{content:"";width:8px;height:8px;background:var(--green);border-radius:99px;box-shadow:0 0 18px var(--green)}
+    h1{font-size:clamp(46px,7vw,84px);line-height:.96;letter-spacing:-.075em;margin:20px 0 22px;max-width:900px}.lead{font-size:clamp(18px,2vw,22px);color:var(--soft);max-width:780px;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.signal-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(148,163,184,.20);border-radius:999px;color:#cbd5e1;background:rgba(15,23,42,.55);font-size:12px;font-weight:700;transition:.18s ease}.chip:hover{transform:translateY(-1px);border-color:rgba(56,189,248,.45);color:#fff}.chip b{height:7px;width:7px;border-radius:99px;background:var(--blue);display:inline-block}.chip.green b{background:var(--green)}.chip.amber b{background:var(--amber)}.chip.violet b{background:var(--violet)}
+    .hero-card{border:1px solid rgba(148,163,184,.19);background:linear-gradient(180deg,rgba(15,23,42,.92),rgba(15,23,42,.55));border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:before{content:"";position:absolute;inset:-80px -120px auto auto;height:210px;width:210px;border-radius:50%;background:rgba(56,189,248,.20);filter:blur(42px)}.hero-card h3{margin:0 0 12px;font-size:14px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase}.metric{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}.metric:first-of-type{border-top:0}.metric strong{font-size:34px;letter-spacing:-.05em}.metric span{color:var(--muted);font-size:14px}.mini-note{margin-top:16px;color:#cbd5e1;font-size:14px;border:1px solid rgba(56,189,248,.19);border-radius:16px;padding:14px;background:rgba(56,189,248,.06)}
+    .layout{display:grid;grid-template-columns:var(--side) minmax(0,1fr);gap:34px;align-items:start}.sidebar{position:sticky;top:92px;border:1px solid var(--line);border-radius:22px;padding:14px;background:rgba(15,23,42,.58);backdrop-filter:blur(12px)}.sidebar p{margin:7px 10px 12px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.side-link{display:block;color:var(--muted);padding:10px 11px;border-radius:14px;font-size:14px;transition:.18s ease}.side-link:hover,.side-link.active{color:#fff;background:rgba(56,189,248,.08)}
+    section{padding:44px 0;scroll-margin-top:96px}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:22px}.kicker{color:var(--blue);font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:900;margin:0 0 8px}h2{font-size:clamp(30px,4vw,48px);line-height:1.04;letter-spacing:-.05em;margin:0}.section-head p{max-width:520px;color:var(--muted);margin:0}.panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(15,23,42,.78),rgba(15,23,42,.45));box-shadow:0 20px 70px rgba(0,0,0,.18);overflow:hidden}.panel-pad{padding:24px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid rgba(148,163,184,.18);background:rgba(2,6,23,.34);border-radius:20px;padding:20px;transition:.18s ease;position:relative;overflow:hidden}.card:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.42);box-shadow:0 18px 45px rgba(0,0,0,.22)}.card h3{margin:0 0 9px;font-size:18px;letter-spacing:-.02em}.card p,.card li{color:var(--muted);font-size:14px}.card ul{margin:12px 0 0;padding-left:18px}.tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--cyan);font-weight:900;margin-bottom:10px}.highlight{border-color:rgba(56,189,248,.35);background:linear-gradient(180deg,rgba(56,189,248,.10),rgba(2,6,23,.28))}
+    .evidence-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.shot{border:1px solid rgba(148,163,184,.18);border-radius:20px;background:#0b1222;overflow:hidden;transition:.20s ease}.shot:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.45);box-shadow:0 25px 60px rgba(0,0,0,.25)}.shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(167,139,250,.08))}.placeholder{height:100%;min-height:230px;display:grid;place-items:center;color:#64748b;text-align:center;padding:22px;background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(167,139,250,.07));font-weight:800}.shot figcaption{padding:16px}.shot h3{margin:0 0 6px;font-size:17px}.shot p{margin:0;color:var(--muted);font-size:13px}.shot a{color:var(--cyan);font-weight:800}.imgbox{position:relative}.imgbox:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(7,11,22,.15));pointer-events:none}.video-shell{border:1px solid rgba(148,163,184,.18);border-radius:22px;background:rgba(2,6,23,.35);padding:14px;box-shadow:0 20px 60px rgba(0,0,0,.22);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}.video-shell:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.36);box-shadow:0 28px 80px rgba(0,0,0,.32)}.video-card{position:relative;display:block;width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;background:#020617;aspect-ratio:9/16;border:1px solid rgba(148,163,184,.16)}.video-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.04);transition:transform .32s ease,filter .32s ease}.video-card:hover img{transform:scale(1.035);filter:saturate(1.1) contrast(1.08) brightness(.9)}.video-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,23,.05),rgba(2,6,23,.72));pointer-events:none}.play-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:76px;height:76px;border-radius:999px;background:rgba(248,250,252,.92);display:grid;place-items:center;color:#020617;font-weight:900;box-shadow:0 20px 70px rgba(0,0,0,.45);transition:.22s ease}.video-card:hover .play-badge{transform:translate(-50%,-50%) scale(1.06);background:#fff}.video-label{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}.video-label strong{display:block;font-size:17px;letter-spacing:-.02em}.video-label span{display:block;margin-top:4px;color:#cbd5e1;font-size:12px}.video-caption{max-width:380px;margin:12px auto 0;color:var(--muted);font-size:13px;text-align:center}
+    .timeline{position:relative;padding-left:24px}.timeline:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--blue),rgba(56,189,248,.05))}.step{position:relative;padding:0 0 20px}.step:before{content:"";position:absolute;left:-22px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px rgba(56,189,248,.65)}.step h3{margin:0 0 4px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:14px}.artifact-list{display:grid;gap:12px}.artifact{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:18px;border:1px solid rgba(148,163,184,.16);background:rgba(2,6,23,.28);transition:.18s ease}.artifact:hover{border-color:rgba(56,189,248,.45);transform:translateY(-1px)}.artifact strong{display:block}.artifact span{display:block;color:var(--muted);font-size:13px}.arrow{color:var(--blue);font-weight:900}
+    .quote{font-size:22px;line-height:1.35;letter-spacing:-.02em;color:#e5e7eb}.muted{color:var(--muted)}.footer{padding:40px 0 64px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}.contact-card{display:flex;gap:12px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}
+
+    @keyframes subtleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes softPulse{0%,100%{box-shadow:0 0 0 rgba(56,189,248,0)}50%{box-shadow:0 0 36px rgba(56,189,248,.12)}}
+    @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .brand-mark{animation:softPulse 4.8s ease-in-out infinite}.hero-card{animation:subtleFloat 7s ease-in-out infinite}.panel,.card,.shot,.artifact,.video-shell{will-change:transform}.btn.primary{background-size:180% 180%;animation:gradientShift 7s ease infinite}.artifact:hover .arrow{transform:translateX(4px);color:#fff}.arrow{transition:.18s ease}.section-head h2{transition:letter-spacing .2s ease}.section-head:hover h2{letter-spacing:-.057em}.imgbox{cursor:zoom-in}.lightbox.open img{animation:lightboxIn .22s ease both}@keyframes lightboxIn{from{opacity:0;transform:scale(.985) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    .lightbox{position:fixed;inset:0;background:rgba(2,6,23,.86);z-index:100;display:none;align-items:center;justify-content:center;padding:28px;backdrop-filter:blur(10px)}.lightbox.open{display:flex}.lightbox img{max-width:min(1180px,96vw);max-height:86vh;border-radius:18px;border:1px solid rgba(148,163,184,.25);box-shadow:var(--shadow)}.lightbox button{position:absolute;top:24px;right:24px}.mobile-menu{display:none}
+    @media (max-width:1020px){.hero-grid,.layout,.evidence-grid{grid-template-columns:1fr}.sidebar{position:relative;top:0;display:none}.hero-card{max-width:620px}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.navlinks{display:none}.mobile-menu{display:inline-flex}}
+    @media (max-width:640px){.wrap{padding:0 18px}.hero{padding:48px 0 20px}h1{font-size:44px}.lead{font-size:17px}.hero-actions .btn{width:100%}.section-head{display:block}.card,.panel-pad{padding:18px}.brand small{display:none}.metric strong{font-size:28px}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="A-ND-I Evidence Center home"><span class="brand-mark">A</span><span>A-ND-I <span class="accent">Evidence Center</span><small>Andrés Mogollón · AI Product</small></span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#ai-product">AI Product</a><a href="#evidence">Evidence</a><a href="#gdef">GDEF</a><a href="#early-product">Early Product</a><a href="#ideas">Ideas in Public</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn ghost mobile-menu" href="#contact">Contact</a>
+  </div>
+</header>
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="reveal visible">
+        <div class="eyebrow">AI product manager evidence center</div>
+        <h1>Building AI products where behavior, quality, and delivery discipline matter.</h1>
+        <p class="lead">I am a Product Manager with a software engineering foundation, focused on AI-native B2B products, agent behavior definition, stakeholder alignment, delivery discipline, and responsible execution from discovery to production.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#ai-product">Explore Product Case Study</a>
+          <a class="btn" href="#evidence">Evidence + Screenshots</a>
+          <a class="btn ghost" href="#gdef">AI Evaluation Research</a>
+        </div>
+        <div class="signal-row">
+          <span class="chip"><b></b>Backlog ownership</span><span class="chip green"><b></b>Acceptance criteria</span><span class="chip amber"><b></b>Agent behavior</span><span class="chip violet"><b></b>Evaluation & governance</span>
+        </div>
+      </div>
+      <aside class="hero-card reveal visible delay-1">
+        <h3>What this center proves</h3>
+        <div class="metric"><strong>0→1</strong><span>Led Strongest Writer from concept, discovery, roadmap and MVP into production workflows.</span></div>
+        <div class="metric"><strong>AI</strong><span>Specified AI-assisted editorial behavior, research workflows, source traceability and content generation quality.</span></div>
+        <div class="metric"><strong>Evals</strong><span>Designed GDEF to evaluate governance-aware behavior, oversight and drift across extended AI interactions.</span></div>
+        <div class="mini-note">Built for recruiters and product leaders who need evidence beyond a CV: product screenshots, workflow artifacts, research outputs and delivery narratives.</div>
+      </aside>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <aside class="sidebar">
+      <p>Navigate</p>
+      <a class="side-link" href="#overview">Overview</a>
+      <a class="side-link" href="#ai-product">Strongest Writer</a>
+      <a class="side-link" href="#evidence">Evidence + Screenshots</a>
+      <a class="side-link" href="#delivery">Delivery Discipline</a>
+      <a class="side-link" href="#gdef">GDEF Research</a>
+      <a class="side-link" href="#early-product">Early Product Leadership</a>
+      <a class="side-link" href="#ideas">Ideas in Public</a>
+      <a class="side-link" href="#contact">Contact</a>
+    </aside>
+    <div>
+      <section id="overview" class="reveal">
+        <div class="section-head"><div><p class="kicker">Overview</p><h2>Product ownership for AI systems, not just AI features.</h2></div><p>This page is structured around evidence: shipped product surfaces, workflow design, product decisions, evaluation methodology and applied governance work.</p></div>
+        <div class="grid-3">
+          <div class="card highlight"><span class="tag">Enterprise B2B</span><h3>Own the product operating system</h3><p>Managed discovery, backlog, roadmap, scope, delivery priorities and stakeholder communication for an AI-native platform used to create professional editorial outputs.</p></div>
+          <div class="card"><span class="tag">AI behavior</span><h3>Specify quality before shipping</h3><p>Translated vague customer expectations into prompts, workflows, source requirements, setup controls, output actions and acceptance criteria engineering could implement.</p></div>
+          <div class="card"><span class="tag">Evals + governance</span><h3>Measure behavior over time</h3><p>Designed an evaluation framework to analyze whether AI systems maintain governance-aware behavior across jurisdictions, languages and extended conversations.</p></div>
+        </div>
+      </section>
+
+      <section id="ai-product" class="reveal">
+        <div class="section-head"><div><p class="kicker">Case Study 01</p><h2>Strongest Writer — AI-native B2B product from concept to production.</h2></div><p>The strongest evidence of end-to-end AI product ownership: discovery, behavior definition, workflows, AI quality, source traceability and production delivery. Strongest Writer is a private 7Atlas product; the screenshots shown here were authorized for portfolio use.</p></div>
+        <div class="panel"><div class="panel-pad grid-2">
+          <div>
+            <p class="quote">The product challenge was not simply “generate articles with AI.” The real product challenge was defining a repeatable editorial workflow where research, sources, AI output, configuration and human review could operate together.</p>
+            <div class="signal-row"><span class="chip"><b></b>Research Tree</span><span class="chip green"><b></b>Source traceability</span><span class="chip amber"><b></b>Editorial assistant</span><span class="chip violet"><b></b>Multi-tenant SaaS</span></div>
+          </div>
+          <div class="timeline">
+            <div class="step"><h3>Discovery and problem framing</h3><p>Captured customer needs for faster article generation and converted them into product requirements, workflows and roadmap priorities.</p></div>
+            <div class="step"><h3>Backlog and acceptance criteria</h3><p>Defined user stories, behavior expectations, output actions, configuration controls and validation requirements for engineering execution.</p></div>
+            <div class="step"><h3>AI workflow design</h3><p>Led the Research Tree concept so users could structure research, reuse branches, inspect sources and generate more original articles.</p></div>
+            <div class="step"><h3>Production and iteration</h3><p>Managed scope, stakeholder expectations, release decisions, technical debt discussions and continuous AI feature improvement after launch.</p></div>
+          </div>
+        </div></div>
+      </section>
+
+      <section id="evidence" class="reveal">
+        <div class="section-head"><div><p class="kicker">Evidence + screenshots</p><h2>Product evidence mapped to AI capabilities.</h2></div><p>Each screenshot connects product decisions to the capabilities recruiters care about: AI workflow design, source traceability, behavior specification, delivery discipline and enterprise product communication.</p></div>
+        <div class="evidence-grid">
+          <figure class="shot"><div class="imgbox"><img src="assets/strongest-02-research-tree.png" onerror="this.replaceWith(makePlaceholder('assets/strongest-02-research-tree.png'))" alt="Strongest Writer Research Tree screenshot" loading="lazy"></div><figcaption><h3>Research Tree — AI workflow orchestration</h3><p>Evidence of product thinking beyond content generation: structured research, reusable branches, selected sources and a repeatable workflow for higher-quality AI outputs.</p></figcaption></figure>
+          <figure class="shot"><div class="imgbox"><img src="assets/strongest-04-generated-article.png" onerror="this.replaceWith(makePlaceholder('assets/strongest-04-generated-article.png'))" alt="Strongest Writer generated article screenshot" loading="lazy"></div><figcaption><h3>Generated Article — output quality and user actions</h3><p>Shows the production flow where AI output, source inclusion, export, save actions and human review become part of the product experience.</p></figcaption></figure>
+        </div>
+        <div class="grid-3" style="margin-top:18px">
+          <figure class="shot"><div class="imgbox"><img src="assets/strongest-01-home-research.png" onerror="this.replaceWith(makePlaceholder('assets/strongest-01-home-research.png'))" alt="Strongest Writer home research screen" loading="lazy"></div><figcaption><h3>Home Research Entry</h3><p>Prompt entry, setup controls, language selection and initial user flow for AI-assisted research.</p></figcaption></figure>
+          <figure class="shot"><div class="imgbox"><img src="assets/strongest-03-source-validation.png" onerror="this.replaceWith(makePlaceholder('assets/strongest-03-source-validation.png'))" alt="Strongest Writer source validation screenshot" loading="lazy"></div><figcaption><h3>Source Validation</h3><p>Evidence of traceability: sources are visible inside the research flow before users rely on AI output.</p></figcaption></figure>
+          <figure class="shot"><div class="imgbox"><img src="assets/strongest-05-setup-module.png" onerror="this.replaceWith(makePlaceholder('assets/strongest-05-setup-module.png'))" alt="Strongest Writer setup module screenshot" loading="lazy"></div><figcaption><h3>Setup Module</h3><p>Behavior controls for tone, prompts and configuration. This is where AI product quality becomes product specification.</p></figcaption></figure>
+        </div>
+      </section>
+
+      <section id="delivery" class="reveal">
+        <div class="section-head"><div><p class="kicker">Delivery discipline</p><h2>Strategic tasks mapped to what the company is asking for.</h2></div><p>These are written intentionally around enterprise B2B product ownership, AI/agent behavior, acceptance criteria, Evals collaboration and scope discipline.</p></div>
+        <div class="grid-2">
+          <div class="card highlight"><span class="tag">Backlog ownership</span><h3>Owned product backlog and roadmap discipline</h3><ul><li>Converted customer and executive requests into prioritized product work.</li><li>Separated core product needs from scope creep to protect delivery focus.</li><li>Aligned engineering capacity with business value and customer expectations.</li></ul></div>
+          <div class="card"><span class="tag">Acceptance criteria</span><h3>Defined what “done” meant for AI behavior</h3><ul><li>Specified expected AI output behavior, source handling, tone controls and article generation flows.</li><li>Created criteria for output usefulness, traceability and user review before release.</li><li>Translated ambiguous AI expectations into implementable engineering tasks.</li></ul></div>
+          <div class="card"><span class="tag">Agent behavior</span><h3>Designed AI-assisted workflow behavior</h3><ul><li>Defined how users move from research query to research tree, source review and article generation.</li><li>Balanced automation with user control through setup modules, prompts, tone and export actions.</li><li>Evaluated model behavior and adjusted product decisions based on practical output quality.</li></ul></div>
+          <div class="card"><span class="tag">Stakeholders</span><h3>Managed stakeholders and delivery risk</h3><ul><li>Communicated delivery trade-offs and delays transparently to business stakeholders.</li><li>Coordinated with technical leads and developers to recover from quality issues.</li><li>Promoted more responsible AI use after identifying risks from uncontrolled AI-generated code.</li></ul></div>
+        </div>
+      </section>
+
+      <section id="gdef" class="reveal">
+        <div class="section-head"><div><p class="kicker">Case Study 02</p><h2>GDEF — AI evaluation, governance and behavioral drift research.</h2></div><p>GDEF demonstrates the other side of AI product work: once AI behavior is shipped, how do we evaluate whether it remains reliable, governed and aligned with context?</p></div>
+        <div class="panel"><div class="panel-pad grid-2">
+          <div>
+            <p class="quote">GDEF evaluates whether frontier AI systems maintain governance-aware behavior across jurisdictions, languages, user roles and extended conversations.</p>
+            <p class="muted">The framework focuses on transparency, jurisdiction awareness, human oversight, reliability, context awareness, pressure resistance, consistency and unsupported certainty.</p>
+            <div class="hero-actions"><a class="btn primary" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/blob/main/Resources/GDEF%20-%20Governance%20Drift%20Evaluation%20Framework%201.0.pdf">Research Paper</a><a class="btn" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/blob/main/Resources/GDEF_1.Technical-Documentation.pdf">Technical Documentation</a><a class="btn" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/tree/main/MVP_Evidence_Set">Evaluation Evidence</a><a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project">Project GitHub</a></div>
+          </div>
+          <div class="artifact-list">
+            <a class="artifact" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/blob/main/Resources/GDEF%20-%20Governance%20Drift%20Evaluation%20Framework%201.0.pdf"><span><strong>Research Paper</strong><span>Final paper describing the framework, motivation, methodology and findings.</span></span><span class="arrow">↗</span></a>
+            <a class="artifact" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/blob/main/Resources/GDEF_1.Technical-Documentation.pdf"><span><strong>Technical Documentation</strong><span>Framework details, scoring structure, implementation logic and evaluation design.</span></span><span class="arrow">↗</span></a>
+            <a class="artifact" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project/tree/main/MVP_Evidence_Set"><span><strong>Evaluation Evidence</strong><span>MVP evidence set with outputs, annotations and experiment artifacts.</span></span><span class="arrow">↗</span></a>
+          </div>
+        </div></div>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="card"><span class="tag">Behavior quality</span><h3>Evaluation criteria</h3><p>Defined dimensions to score transparency, oversight, jurisdiction awareness, consistency and pressure resistance.</p></div>
+          <div class="card"><span class="tag">Drift detection</span><h3>Long conversation testing</h3><p>Designed extended interactions to observe whether governance behavior degrades under pressure or contextual complexity.</p></div>
+          <div class="card"><span class="tag">Product relevance</span><h3>Evals mindset</h3><p>Connects directly to AI product quality: a feature is not ready until behavior can be specified, observed and evaluated.</p></div>
+        </div>
+      </section>
+
+      <section id="early-product" class="reveal">
+        <div class="section-head"><div><p class="kicker">Early Product Leadership</p><h2>Product leadership before AI: training, workflows and enterprise software communication.</h2></div><p>This section supports the broader story: before AI products, I was already translating technical systems into product workflows, customer education and operational adoption.</p></div>
+        <div class="grid-3">
+          <figure class="shot"><div class="imgbox"><img src="assets/leverit-01-cmdb-masterclass.png" onerror="this.replaceWith(makePlaceholder('assets/leverit-01-cmdb-masterclass.png'))" alt="CMDB Conceptos básicos masterclass screenshot" loading="lazy"></div><figcaption><h3>CMDB Concepts Masterclass — 6.5k+ views</h3><p>Technical product education for enterprise users and teams. <a href="https://youtu.be/_nLTanJgiFo" target="_blank" rel="noopener">Watch video ↗</a></p></figcaption></figure>
+          <figure class="shot"><div class="imgbox"><img src="assets/leverit-02-service-catalog.png" onerror="this.replaceWith(makePlaceholder('assets/leverit-02-service-catalog.png'))" alt="LeverIt service catalog screenshot" loading="lazy"></div><figcaption><h3>Service Catalog / Enterprise Workflow</h3><p>Evidence of workflow thinking, categorization, process design and enterprise software adoption.</p></figcaption></figure>
+          <figure class="shot"><div class="imgbox"><img src="assets/leverit-03-product-manager-podcast.png" onerror="this.replaceWith(makePlaceholder('assets/leverit-03-product-manager-podcast.png'))" alt="Product Manager podcast screenshot" loading="lazy"></div><figcaption><h3>CEO + Product Manager Discussion</h3><p>Shows product communication with executive context, business framing and customer-facing explanation.</p></figcaption></figure>
+        </div>
+      </section>
+
+
+      <section id="ideas" class="reveal">
+        <div class="section-head">
+          <div><p class="kicker">Ideas in Public</p><h2>Product thinking on how AI changes the product lifecycle.</h2></div>
+          <p>This is not the core evidence, but it supports the narrative: I build AI products, evaluate AI behavior, and communicate how product work changes when AI becomes part of the system.</p>
+        </div>
+        <div class="panel"><div class="panel-pad grid-2">
+          <div>
+            <span class="tag">Product Thinking</span>
+            <h3>How AI Is Changing the Product Lifecycle</h3>
+            <p class="quote">A short product reflection on how AI is changing discovery, delivery, evaluation, iteration, and the way teams think about quality across the product lifecycle.</p>
+            <p class="muted">Strategic value: this reinforces communication, product judgment, and AI-native thinking without distracting from the main evidence: Strongest Writer, GDEF, and early enterprise product leadership.</p>
+            <div class="hero-actions">
+              <a class="btn primary" target="_blank" rel="noopener" href="https://youtube.com/shorts/ey22lYavS6A?feature=share">Watch short ↗</a>
+              <a class="btn" href="#ai-product">Back to AI Product Evidence</a>
+            </div>
+          </div>
+          <div class="video-shell">
+            <a class="video-card" target="_blank" rel="noopener" href="https://youtube.com/shorts/ey22lYavS6A?feature=share" aria-label="Watch YouTube Short: How AI Is Changing the Product Lifecycle">
+              <img src="https://img.youtube.com/vi/ey22lYavS6A/hqdefault.jpg" alt="YouTube Short preview: How AI Is Changing the Product Lifecycle" loading="lazy">
+              <span class="play-badge">▶</span>
+              <span class="video-label"><strong>How AI Is Changing the Product Lifecycle</strong><span>Watch the short on YouTube</span></span>
+            </a>
+            <p class="video-caption">YouTube Shorts may block embedded playback in static portfolio pages, so this card uses the official preview and opens the video directly.</p>
+          </div>
+        </div></div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <div class="panel"><div class="panel-pad">
+          <p class="kicker">Contact</p><h2>Let’s talk about AI product, evaluation and governance.</h2>
+          <p class="muted" style="max-width:760px">I am especially interested in AI-native B2B products where product quality depends on behavior definition, evaluation, human oversight, stakeholder management and disciplined delivery.</p>
+          <div class="contact-card" style="margin-top:18px"><a class="btn primary" href="mailto:andimoggo@gmail.com">andimoggo@gmail.com</a><a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/a-nd-i/">Connect on LinkedIn</a><a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/A-nd-I/GDEF_Project">GDEF Project GitHub</a></div>
+        </div></div>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="footer"><div class="wrap">A-ND-I Evidence Center · Built as a focused product artifact for AI Product, Evaluation and Governance roles.</div></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="btn" id="closeLightbox">Close</button><img id="lightboxImg" alt="Expanded evidence screenshot"></div>
+<script>
+function makePlaceholder(name){ const div=document.createElement('div'); div.className='placeholder'; div.innerHTML='<div>Visual evidence</div>'; return div; }
+const reveals=[...document.querySelectorAll('.reveal')]; const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.12}); reveals.forEach(el=>io.observe(el));
+const sideLinks=[...document.querySelectorAll('.side-link')]; const sections=sideLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean); const spy=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){sideLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}})},{rootMargin:'-35% 0px -55% 0px',threshold:0}); sections.forEach(s=>spy.observe(s));
+const lightbox=document.getElementById('lightbox'), lbImg=document.getElementById('lightboxImg'); document.addEventListener('click',e=>{const img=e.target.closest('.shot img'); if(img && img.complete && img.naturalWidth){ lbImg.src=img.src; lbImg.alt=img.alt; lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); }}); document.getElementById('closeLightbox').onclick=()=>{lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true')}; lightbox.addEventListener('click',e=>{if(e.target===lightbox) document.getElementById('closeLightbox').click();}); document.addEventListener('keydown',e=>{if(e.key==='Escape') document.getElementById('closeLightbox').click();});
+</script>
+</body>
+</html>
