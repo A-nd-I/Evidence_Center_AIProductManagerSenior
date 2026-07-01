@@ -38,11 +38,13 @@
     .evidence-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.shot{border:1px solid rgba(148,163,184,.18);border-radius:20px;background:#0b1222;overflow:hidden;transition:.20s ease}.shot:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.45);box-shadow:0 25px 60px rgba(0,0,0,.25)}.shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(167,139,250,.08))}.placeholder{height:100%;min-height:230px;display:grid;place-items:center;color:#64748b;text-align:center;padding:22px;background:linear-gradient(135deg,rgba(56,189,248,.06),rgba(167,139,250,.07));font-weight:800}.shot figcaption{padding:16px}.shot h3{margin:0 0 6px;font-size:17px}.shot p{margin:0;color:var(--muted);font-size:13px}.shot a{color:var(--cyan);font-weight:800}.imgbox{position:relative}.imgbox:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(7,11,22,.15));pointer-events:none}
     .timeline{position:relative;padding-left:24px}.timeline:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--blue),rgba(56,189,248,.05))}.step{position:relative;padding:0 0 20px}.step:before{content:"";position:absolute;left:-22px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px rgba(56,189,248,.65)}.step h3{margin:0 0 4px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:14px}.artifact-list{display:grid;gap:12px}.artifact{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:18px;border:1px solid rgba(148,163,184,.16);background:rgba(2,6,23,.28);transition:.18s ease}.artifact:hover{border-color:rgba(56,189,248,.45);transform:translateY(-1px)}.artifact strong{display:block}.artifact span{display:block;color:var(--muted);font-size:13px}.arrow{color:var(--blue);font-weight:900}
     .quote{font-size:22px;line-height:1.35;letter-spacing:-.02em;color:#e5e7eb}.muted{color:var(--muted)}.footer{padding:40px 0 64px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}.contact-card{display:flex;gap:12px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}
+    .artifact-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--cyan);margin:0 0 10px}.proc-pipeline{position:relative;margin-top:22px;padding:8px 0 4px}.proc-rail{position:absolute;top:28px;left:24px;right:24px;height:3px;background:rgba(148,163,184,.15);border-radius:99px;overflow:hidden;z-index:0}.proc-rail-fill{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--green));box-shadow:0 0 18px rgba(56,189,248,.45);transition:width 2.4s cubic-bezier(.22,1,.36,1)}.reveal.visible .proc-rail-fill{width:100%}.proc-nodes{display:flex;justify-content:space-between;gap:6px;margin:0;padding:0;list-style:none;position:relative;z-index:1;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}.proc-nodes::-webkit-scrollbar{display:none}.proc-node{flex:1 0 108px;min-width:108px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;scroll-snap-align:center;opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}.reveal.visible .proc-node{opacity:1;transform:none}.reveal.visible .proc-node:nth-child(1){transition-delay:.08s}.reveal.visible .proc-node:nth-child(2){transition-delay:.18s}.reveal.visible .proc-node:nth-child(3){transition-delay:.28s}.reveal.visible .proc-node:nth-child(4){transition-delay:.38s}.reveal.visible .proc-node:nth-child(5){transition-delay:.48s}.reveal.visible .proc-node:nth-child(6){transition-delay:.58s}.reveal.visible .proc-node:nth-child(7){transition-delay:.68s}.reveal.visible .proc-node:nth-child(8){transition-delay:.78s}.proc-dot{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:2px solid rgba(56,189,248,.35);background:linear-gradient(145deg,rgba(15,23,42,.95),rgba(56,189,248,.12));box-shadow:0 0 0 4px rgba(7,11,22,.6),0 8px 24px rgba(0,0,0,.25);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;position:relative}.proc-dot:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(56,189,248,.18);opacity:0;transform:scale(.85);transition:opacity .25s ease,transform .25s ease}.proc-node:hover .proc-dot{transform:translateY(-3px) scale(1.06);border-color:rgba(103,232,249,.7);box-shadow:0 0 0 4px rgba(7,11,22,.6),0 0 28px rgba(56,189,248,.28)}.proc-node:hover .proc-dot:after{opacity:1;transform:scale(1)}.proc-num{font-size:13px;font-weight:900;color:var(--cyan);letter-spacing:.04em}.proc-label{font-size:12px;font-weight:700;color:var(--soft);line-height:1.35;max-width:96px}.proc-node:last-child .proc-dot{border-color:rgba(52,211,153,.5);background:linear-gradient(145deg,rgba(15,23,42,.95),rgba(52,211,153,.14))}.proc-node:last-child .proc-num{color:var(--green)}@keyframes procPulse{0%,100%{box-shadow:0 0 0 4px rgba(7,11,22,.6),0 8px 24px rgba(0,0,0,.25)}50%{box-shadow:0 0 0 4px rgba(7,11,22,.6),0 0 22px rgba(56,189,248,.22)}}.reveal.visible .proc-node:last-child .proc-dot{animation:procPulse 2.8s ease-in-out infinite .9s}.discovery-map{background:#f8fafc;border:1px solid #e2e8f0;border-radius:var(--radius);padding:24px;color:#0f172a;margin-top:18px}.discovery-map>h3{margin:0 0 16px;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#64748b;font-weight:900}.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.map-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:18px;transition:.18s ease}.map-card:hover{border-color:#94a3b8;box-shadow:0 8px 24px rgba(15,23,42,.08)}.map-card h3{margin:0 0 10px;font-size:16px;color:#0f172a;letter-spacing:-.02em}.map-card .map-tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.10em;color:#0369a1;font-weight:900;margin-bottom:8px}.map-card p,.map-card li{font-size:13px;color:#64748b;line-height:1.5}.map-card ul{margin:6px 0 0;padding-left:16px}.map-card strong{color:#334155;font-size:12px;text-transform:uppercase;letter-spacing:.06em}.map-highlight{background:linear-gradient(180deg,#eff6ff,#fff);border-color:#93c5fd}.map-highlight h3{color:#1e40af}.decision-table{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:18px}.dec-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}.dec-row:first-child{border-top:0}.dec-row.header{background:rgba(56,189,248,.08)}.dec-row.header div{font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--cyan);font-weight:900}.dec-row div{padding:16px 18px;font-size:14px;color:var(--muted);border-right:1px solid var(--line)}.dec-row div:last-child{border-right:0;color:var(--soft)}.dec-row.header div{color:var(--cyan)}.outcome-card{border:1px solid rgba(148,163,184,.18);background:rgba(2,6,23,.34);border-radius:20px;padding:20px}.outcome-card strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:8px;font-weight:900}.outcome-card span{display:block;color:var(--muted);font-size:14px;line-height:1.5}.confidential-card{border:1px solid rgba(148,163,184,.18);background:rgba(2,6,23,.28);border-radius:20px;padding:22px;margin-top:18px}.confidential-badge{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--amber);font-weight:900;border:1px solid rgba(251,191,36,.35);border-radius:999px;padding:6px 12px;margin-top:14px;background:rgba(251,191,36,.08)}
+    @media (max-width:1020px){.map-grid{grid-template-columns:1fr}.dec-row{grid-template-columns:1fr}.dec-row div{border-right:0;border-bottom:1px solid var(--line)}.dec-row div:last-child{border-bottom:0}.proc-rail{left:12px;right:12px}.proc-nodes{justify-content:flex-start;padding-bottom:6px}}
 
     @keyframes subtleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
     @keyframes softPulse{0%,100%{box-shadow:0 0 0 rgba(56,189,248,0)}50%{box-shadow:0 0 36px rgba(56,189,248,.12)}}
     @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-    .brand-mark{animation:softPulse 4.8s ease-in-out infinite}.hero-card{animation:subtleFloat 7s ease-in-out infinite}.panel,.card,.shot,.artifact{will-change:transform}.btn.primary{background-size:180% 180%;animation:gradientShift 7s ease infinite}.artifact:hover .arrow{transform:translateX(4px);color:#fff}.arrow{transition:.18s ease}.section-head h2{transition:letter-spacing .2s ease}.section-head:hover h2{letter-spacing:-.057em}.imgbox{cursor:zoom-in}.lightbox.open img{animation:lightboxIn .22s ease both}@keyframes lightboxIn{from{opacity:0;transform:scale(.985) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    .brand-mark{animation:softPulse 4.8s ease-in-out infinite}.hero-card{animation:subtleFloat 7s ease-in-out infinite}.panel,.card,.shot,.artifact{will-change:transform}.btn.primary{background-size:180% 180%;animation:gradientShift 7s ease infinite}.artifact:hover .arrow{transform:translateX(4px);color:#fff}.arrow{transition:.18s ease}.section-head h2{transition:letter-spacing .2s ease}.section-head:hover h2{letter-spacing:-.057em}.imgbox{cursor:zoom-in}.lightbox.open img{animation:lightboxIn .22s ease both}@keyframes lightboxIn{from{opacity:0;transform:scale(.985) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.proc-node,.reveal.visible .proc-node{opacity:1;transform:none}.proc-rail-fill{width:100%}}
     .lightbox{position:fixed;inset:0;background:rgba(2,6,23,.86);z-index:100;display:none;align-items:center;justify-content:center;padding:28px;backdrop-filter:blur(10px)}.lightbox.open{display:flex}.lightbox img{max-width:min(1180px,96vw);max-height:86vh;border-radius:18px;border:1px solid rgba(148,163,184,.25);box-shadow:var(--shadow)}.lightbox button{position:absolute;top:24px;right:24px}.mobile-menu{display:none}
     @media (max-width:1020px){.hero-grid,.layout,.evidence-grid{grid-template-columns:1fr}.sidebar{position:relative;top:0;display:none}.hero-card{max-width:620px}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.navlinks{display:none}.mobile-menu{display:inline-flex}}
     @media (max-width:640px){.wrap{padding:0 18px}.hero{padding:48px 0 20px}h1{font-size:44px}.lead{font-size:17px}.hero-actions .btn{width:100%}.section-head{display:block}.card,.panel-pad{padding:18px}.brand small{display:none}.metric strong{font-size:28px}}
@@ -56,6 +58,7 @@
       <div class="navitem"><a href="strongest-writer.html">Strongest Writer ▾</a>
         <div class="dropdown">
           <a href="strongest-writer.html#overview">Product Summary</a>
+          <a href="strongest-writer.html#product-discovery">Product Discovery Research</a>
           <a href="strongest-writer.html#evidence">Product Evidence</a>
           <a href="strongest-writer.html#research-tree">Product Execution / Research Tree</a>
           <a href="strongest-writer.html#delivery">Delivery Discipline</a>
@@ -119,6 +122,115 @@
           <div class="step"><h3>Production and iteration</h3><p>Managed scope, stakeholder expectations, release decisions, technical debt discussions and continuous AI feature improvement after launch.</p></div>
         </div>
       </div></div>
+    </section>
+
+    <section id="product-discovery" class="reveal sec sec-green">
+      <p class="artifact-label">Artifact Type · Competitive Analysis • Product Discovery • Feature Mapping</p>
+      <div class="section-head">
+        <div><p class="kicker">Product Discovery Evidence</p><h2>Product Discovery Research</h2><p class="muted" style="margin-top:10px;max-width:640px">How product discovery and competitive research shaped Strongest Writer before development began.</p></div>
+        <p>Structured discovery across AI writing, research, publishing, SEO and editorial workflow products — summarized for a public portfolio without exposing confidential research artifacts.</p>
+      </div>
+
+      <p class="muted">Before defining the Strongest Writer MVP, I performed structured product discovery across AI writing, AI research, publishing, SEO and editorial workflow products. The goal was not to copy competitors. The objective was to understand user workflows, feature patterns, product positioning, workflow gaps and market opportunities before defining the product architecture.</p>
+
+      <div class="panel" style="margin-top:22px"><div class="panel-pad">
+        <span class="tag">Product Discovery Process</span>
+        <div class="proc-pipeline" aria-label="Product discovery process from market research to engineering execution">
+          <div class="proc-rail" aria-hidden="true"><span class="proc-rail-fill"></span></div>
+          <ol class="proc-nodes">
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">1</span></span><span class="proc-label">Market Research</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">2</span></span><span class="proc-label">Competitive Mapping</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">3</span></span><span class="proc-label">Feature Inventory</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">4</span></span><span class="proc-label">Pattern Identification</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">5</span></span><span class="proc-label">Opportunity Analysis</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">6</span></span><span class="proc-label">Product Vision</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">7</span></span><span class="proc-label">MVP Definition</span></li>
+            <li class="proc-node"><span class="proc-dot"><span class="proc-num">8</span></span><span class="proc-label">Engineering Execution</span></li>
+          </ol>
+        </div>
+      </div></div>
+
+      <div class="discovery-map">
+        <h3>Discovery Map — product patterns observed</h3>
+        <div class="map-grid">
+          <div class="map-card">
+            <span class="map-tag">AI Writing Platforms</span>
+            <h3>Generation-first tools</h3>
+            <p><strong>Examples</strong></p>
+            <p>Jasper AI, Anyword, WriteMe AI, Jaq n Jil</p>
+            <p><strong>Observed strengths</strong></p>
+            <ul><li>Fast generation</li><li>Marketing copy</li><li>SEO support</li></ul>
+            <p><strong>Observed tradeoffs</strong></p>
+            <ul><li>Weak research traceability</li><li>Limited evidence comparison</li><li>Generation-first workflow</li></ul>
+          </div>
+          <div class="map-card">
+            <span class="map-tag">Research Platforms</span>
+            <h3>Research without publishing</h3>
+            <p><strong>Examples</strong></p>
+            <p>PaperGuide, WriterZen, LongShot AI</p>
+            <p><strong>Observed strengths</strong></p>
+            <ul><li>AI search</li><li>Literature review</li><li>References</li><li>Topic exploration</li></ul>
+            <p><strong>Observed tradeoffs</strong></p>
+            <ul><li>Research stops before publishing</li><li>Limited editorial workflow</li></ul>
+          </div>
+          <div class="map-card">
+            <span class="map-tag">Publishing &amp; Automation</span>
+            <h3>Publishing-first automation</h3>
+            <p><strong>Examples</strong></p>
+            <p>MacawHQ, Article Fiesta, AutoWrite, Written Labs</p>
+            <p><strong>Observed strengths</strong></p>
+            <ul><li>WordPress integration</li><li>CMS publishing</li><li>Bulk generation</li><li>SEO automation</li></ul>
+            <p><strong>Observed tradeoffs</strong></p>
+            <ul><li>Publishing-first workflow</li><li>Limited validation</li><li>Limited source comparison</li></ul>
+          </div>
+          <div class="map-card">
+            <span class="map-tag">Assistant Platforms</span>
+            <h3>Isolated copilots</h3>
+            <p><strong>Examples</strong></p>
+            <p>Copilotly, Newswriter.ai</p>
+            <p><strong>Observed strengths</strong></p>
+            <ul><li>Productivity</li><li>Specialized copilots</li></ul>
+            <p><strong>Observed tradeoffs</strong></p>
+            <ul><li>Fragmented workflows</li><li>Isolated experiences</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card highlight" style="margin-top:18px">
+        <span class="tag">Opportunity Identified</span>
+        <h3>Research-first editorial platform</h3>
+        <p>Competitive research showed that many products solved individual problems very well, but very few connected research, source comparison, validation, ranking, article generation and publishing into one coherent editorial workflow.</p>
+        <div class="signal-row" style="margin-top:14px">
+          <span class="chip"><b></b>Research Tree</span><span class="chip green"><b></b>Multi-source Research</span><span class="chip amber"><b></b>Source Comparison</span><span class="chip violet"><b></b>Source Ranking</span><span class="chip"><b></b>Validation Layer</span><span class="chip green"><b></b>Editorial Workflow</span><span class="chip amber"><b></b>Article Generation</span><span class="chip violet"><b></b>WordPress Publishing</span>
+        </div>
+      </div>
+
+      <span class="tag" style="margin-top:28px;display:inline-block">Product Decisions Derived</span>
+      <div class="decision-table">
+        <div class="dec-row header"><div>Discovery Insight</div><div>Product Decision</div></div>
+        <div class="dec-row"><div>Existing tools prioritized generation speed over research quality.</div><div>Position Strongest Writer as a research-first editorial platform instead of another AI writer.</div></div>
+        <div class="dec-row"><div>Research and publishing existed in separate products.</div><div>Connect research, synthesis, article generation and publishing inside one workflow.</div></div>
+        <div class="dec-row"><div>Evidence quality depended heavily on the user.</div><div>Introduce source validation and ranking logic.</div></div>
+        <div class="dec-row"><div>Editorial workflows were fragmented.</div><div>Design a unified end-to-end journalist workflow.</div></div>
+        <div class="dec-row"><div>SEO tools focused on distribution.</div><div>Keep publishing capabilities while making research the product's core capability.</div></div>
+      </div>
+
+      <span class="tag" style="margin-top:28px;display:inline-block">Key Discovery Outcomes</span>
+      <div class="grid-2" style="margin-top:14px">
+        <div class="outcome-card"><strong>Products reviewed</strong><span>AI writing, research, publishing, SEO and assistant platforms</span></div>
+        <div class="outcome-card"><strong>Areas evaluated</strong><span>Generation, research, onboarding, integrations, publishing, editorial workflow</span></div>
+        <div class="outcome-card"><strong>Primary outcome</strong><span>Research-first editorial workflow opportunity identified</span></div>
+        <div class="outcome-card"><strong>Result</strong><span>Product strategy defined before MVP development</span></div>
+      </div>
+
+      <div class="confidential-card">
+        <span class="tag">Supporting Evidence</span>
+        <p class="muted">The original competitive research evaluated AI writing, research, publishing, SEO and editorial workflow platforms to identify recurring patterns and product opportunities before defining the Strongest Writer MVP.</p>
+        <p class="muted" style="margin-top:12px">To respect confidentiality and intellectual property, this portfolio summarizes the methodology, the observed patterns and the resulting product decisions rather than publishing the original research artifact.</p>
+        <span class="confidential-badge">Research summarized for public portfolio</span>
+      </div>
+
+      <p class="quote" style="margin-top:24px">This discovery process directly influenced Strongest Writer's architecture. Rather than building another AI writer, the product evolved into a research-first editorial platform focused on source comparison, validation, ranking, article generation and WordPress publishing.</p>
     </section>
 
     <section id="evidence" class="reveal sec sec-amber">
